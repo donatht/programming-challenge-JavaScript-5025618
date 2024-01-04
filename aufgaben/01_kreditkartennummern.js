@@ -1,5 +1,7 @@
 function mask(cc) {
   // code here
+  return cc.slice(-cc.length, -4).replaceAll(new RegExp(/\w/, "g"), "*") + cc.slice(-4);
+
 }
 /*
   Um den Code zu testen, richten Sie eine Testumgebung ein
