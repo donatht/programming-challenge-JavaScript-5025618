@@ -1,6 +1,7 @@
 function upAndDown(str) {
-   // code here
-   
+    // code here
+    const numbers = str.split(' ').map((element) => parseInt(element));
+    return Math.max(...numbers) + ' ' + Math.min(...numbers);
 }
 
 /*
@@ -10,6 +11,7 @@ function upAndDown(str) {
 
 
 var assert = require('assert');
+const { log } = require('console');
 describe('Auf und nieder', function () {
     it('Beispiele', function () {
         assert.equal(upAndDown("54 21 789 3 3314 12 364 2"), "3314 2");
