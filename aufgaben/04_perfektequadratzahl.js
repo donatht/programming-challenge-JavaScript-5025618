@@ -1,5 +1,10 @@
 function perfectSquare(sq) {
     // code here
+    if (Number.isInteger(Math.sqrt(sq))){
+        return Math.pow(Math.sqrt(sq)+1, 2)
+    }else{
+        return -1
+    }
 }
 
 /*
