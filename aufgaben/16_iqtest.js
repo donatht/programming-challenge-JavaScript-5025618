@@ -1,6 +1,20 @@
 function iqTest(numbers) {
-   // code here
-   
+    // code here
+    const a = numbers.split(" ").map((element) => parseInt(element))
+    let arrayIsEven = true
+    if ((a[0] % 2 == 0 && a[1] % 2 == 0) ||
+        (a[1] % 2 == 0 && a[2] % 2 == 0) ||
+        (a[0] % 2 == 0 && a[2] % 2 == 0)) {
+        arrayIsEven = true;
+    } else {
+        arrayIsEven = false
+    }
+
+    for (let i = 0; i < a.length; i++) {
+        if ((arrayIsEven && a[i] % 2 != 0) || (!arrayIsEven && a[i] % 2 == 0)) {
+            return i + 1
+        }
+    }
 }
 
 /*
