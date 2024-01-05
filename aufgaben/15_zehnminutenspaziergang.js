@@ -1,6 +1,28 @@
 function isValidWalk(walk) {
-   // code here
-   
+    // code here
+    let xPos = 0
+    let yPos = 0
+    if (walk.length != 10) {
+        return false
+    } else {
+        for (let step = 0; step < walk.length; step++) {
+            switch (walk[step]) {
+                case "n":
+                    yPos += 1;
+                    break;
+                case "e":
+                    xPos += 1;
+                    break;
+                case "s":
+                    yPos -= 1;
+                    break;
+                case "w":
+                    xPos -= 1;
+                    break;
+            }
+        }
+    }
+    return (xPos == 0 && yPos == 0);
 }
 
 /*
