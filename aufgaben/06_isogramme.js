@@ -1,6 +1,15 @@
 function isIsogram(str) {
     // code here
-   
+    str = str.toLowerCase();
+    let chars = [];
+    for (let i = 0; i < str.length; i++) {
+        if (chars.includes(str.charAt(i))) {
+            return false;
+        } else {
+            chars.push(str.charAt(i))
+        }
+    }
+    return true;
 }
 
 /*
@@ -21,7 +30,7 @@ describe('Isogramme', function () {
     it('Beispiele', function () {
         assert.equal(isIsogram("Europa"), true);
         assert.equal(isIsogram("Großkatzenimpfbuch"), true);
-        assert.equal(isIsogram("Pokalbeschriftung"), true );
+        assert.equal(isIsogram("Pokalbeschriftung"), true);
         assert.equal(isIsogram("Papa"), false,);
         assert.equal(isIsogram("Kanada"), false);
     });
