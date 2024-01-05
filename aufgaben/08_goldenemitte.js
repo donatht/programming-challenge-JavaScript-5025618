@@ -1,6 +1,10 @@
 function goldenMiddle(word) {
-   // code here
-   
+    // code here
+    if (word.length % 2 == 0) {
+        return word.slice((word.length / 2) - 1, (word.length / 2) + 1)
+    } else {
+        return word.charAt((word.length - 1) / 2)
+    }
 }
 
 /*
