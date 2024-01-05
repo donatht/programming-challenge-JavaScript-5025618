@@ -1,7 +1,30 @@
 function likes(names) {
-      // code here
-   
+    // code here
+    switch (names.length) {
+        case 0:
+            return 'niemandem gefällt das';
+        case 1:
+            return names[0] + " mag das";
+        case 2:
+            return names.join(' und ') + " mögen das";
+        case 3:
+            return names[0] + ", " + names[1] + " und " + names[2] + " mögen das";
+        default:
+            return names[0] + ", " + names[1] + " und " + (names.length - 2) + " weitere mögen das";
+
+    }
+
+
 }
+
+function getName(names) {
+    first = names.shift();
+    return first
+}
+
+
+
+
 
 /*
     Geben Sie den passenden Text aus, je nachdem, wie viele Likes es gibt.
