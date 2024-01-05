@@ -1,6 +1,7 @@
 function longestWord(s) {
-      // code here
-    
+    // code here
+    return s.split(' ').sort(function (a, b) { return b.length - a.length }).shift().length;
+
 }
 
 
