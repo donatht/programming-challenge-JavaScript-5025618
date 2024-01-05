@@ -1,6 +1,7 @@
 function getVowal(str) {
       // code here
-   
+   return str.match(/[AEIOUaeiou]/g).length
+    // return (str.match(/[aeiou]/ig)||[]).length
 }
 
 
