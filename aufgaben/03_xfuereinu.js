@@ -1,4 +1,5 @@
 function xu(str) {
+    return Array.from(str.toLowerCase()).filter(c => c === "x").length == Array.from(str.toLowerCase()).filter(c => c === "u").length
     // code here
 }
 
