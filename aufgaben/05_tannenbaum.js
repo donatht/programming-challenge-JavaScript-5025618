@@ -1,5 +1,12 @@
 function tree(n) {
     // code here
+    let tree = [];
+    for (let i = 1; i <= n; i++) {
+        let stars = "*".repeat(2 * i - 1);
+        let space = " ".repeat(n - i);
+        tree.push(space + stars + space)
+    }
+    return tree
 }
 
 /*
