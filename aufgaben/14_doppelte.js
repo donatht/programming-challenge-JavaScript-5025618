@@ -1,7 +1,9 @@
 function duplicateCount(text) {
-   // code here
-   
-  
+    // code here
+    let count = {};
+    Array.from(text.toLowerCase()).forEach(function (char) { count[char] = (count[char] || 0) + 1; });
+    const multipleChars = Object.entries(count).filter(([key, value]) => value > 1);
+    return multipleChars.length
 }
 
 /*
