@@ -1,5 +1,13 @@
 function odds(A) {
   // code here
+  do {
+    const filtered = A.filter((item) => item == A[0])
+    if (filtered.length % 2 != 0) {
+      return A[0];
+    }
+    A = A.filter((item) => item != A[0])
+  } while (A.length > 0);
+
 }
 /*
   Um den Code zu testen, richten Sie eine Testumgebung ein
